@@ -1,7 +1,10 @@
-@extends('admin::layouts.master')
+@extends('admin::layouts.master', ['title' => 'Dashboard'])
 
 @section('content')
-    <h1>Hello World</h1>
+    <div class="px-4 pt-6">
+        <h1 class="text-3xl dark:text-gray-300">Hello World</h1>
 
-    <p>Module: {!! config('admin.name') !!}</p>
+        <p class="dark:text-gray-300">Module: {!! config('admin.name') !!}</p>
+
+    </div>
 @endsection

@@ -14,6 +14,7 @@ use Modules\Auth\Http\Controllers\AuthController;
 |
 */
 
-Route::group([], function () {
+Route::middleware('guest')->group(function () {
     Route::resource('auth', AuthController::class)->names('auth');
+    Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 });
