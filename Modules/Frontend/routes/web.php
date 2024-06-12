@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Frontend\Http\Controllers\FrontendController;
+use Modules\Frontend\Http\Controllers\HomePageController;
+use Modules\Frontend\Http\Controllers\TentangkamiController;
+use Modules\Frontend\Http\Controllers\WakafTanahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,22 @@ use Modules\Frontend\Http\Controllers\FrontendController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('frontend', FrontendController::class)->names('frontend');
+
+Route::name('Frontend')->get('/',function(){
+     return view('frontend::index');
+});
+Route::name('Wakaftanah')->get('/Wakaftanah',function(){
+     return view('frontend::Wakaf_tanah');
+});
+Route::name('berita')->get('/berita',function(){
+     return view('frontend::berita');
+});
+Route::name('Tentang-kami')->get('/Tentang-kami',function(){
+     return view('frontend::Tentang_kami');
+});
+Route::name('Galleri')->get('/Galleri',function(){
+     return view('frontend::galleri');
+});
+Route::name('donasi')->get('/donasi',function(){
+     return view('frontend::program');
 });

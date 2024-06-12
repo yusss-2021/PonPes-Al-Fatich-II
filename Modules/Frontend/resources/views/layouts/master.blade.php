@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Frontend Module - {{ config('app.name', 'Laravel') }}</title>
-
-    <meta name="description" content="{{ $description ?? '' }}">
-    <meta name="keywords" content="{{ $keywords ?? '' }}">
-    <meta name="author" content="{{ $author ?? '' }}">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-    {{-- Vite CSS --}}
-    {{-- {{ module_vite('build-frontend', 'resources/assets/sass/app.scss') }} --}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondok Pesantren Al Fatich 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+      <style>
+        .font-p{
+          font-size: 12px;
+        }
+        .font-13{
+          font-size: 13px;
+        }
+        .mr-1rem{
+          margin-right: 1rem;
+        }
+        .card-title{
+          font-weight: 500;
+          line-height: 1.2;
+          color: black;
+        }
+      </style>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+     
 </head>
-
 <body>
-    @yield('content')
 
-    {{-- Vite JS --}}
-    {{-- {{ module_vite('build-frontend', 'resources/assets/js/app.js') }} --}}
+    @section('header')
+        @include('frontend::layouts.header')
+    @show
+    <main id="app">
+        @yield('content')
+    </main>
+    @section('footer')
+        @include('frontend::layouts.footer')
+    @show
 </body>
+</html>

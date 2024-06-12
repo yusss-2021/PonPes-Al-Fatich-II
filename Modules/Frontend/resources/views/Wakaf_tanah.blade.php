@@ -69,7 +69,7 @@
         <div class="col col-xl-8 mr-auto">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"
+              <a id="btn-iw" class="nav-link" aria-current="page" href="#"
                 >Informasi Wakat</a
               >
             </li>
@@ -82,7 +82,7 @@
           </ul>
         </div>
       </div>
-      <div id="informasi_wakaf_tanah" class="d-none row m-0 p-0 mt-3">
+      <div id="informasi_wakaf_tanah" class=" row m-0 p-0 mt-3">
         <div class="col col-xl-8 mr-auto">
           <div class="text-wakaf">
             <p class="custom-p">
@@ -106,7 +106,7 @@
           </div>
         </div>
       </div>
-      <div id="donatur_wakaf_tanah" class="row m-0 p-0 mt-3">
+      <div id="donatur_wakaf_tanah" class="d-none row m-0 p-0 mt-3">
         <div class="col col-xl-8 mr-auto">
           <ul class="list-donatur">
             <li class="m-3 row shadow-sm rounded p-2 pt-3 bg-white pb-2" style="margin-left: -4% !important;width: 100%;">

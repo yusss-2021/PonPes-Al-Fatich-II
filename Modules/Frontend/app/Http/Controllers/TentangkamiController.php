@@ -7,14 +7,14 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class FrontendController extends Controller
+class TentangkamiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-         return view('frontend::index');
+        return view('frontend::Tentang_kami');
     }
 
     /**

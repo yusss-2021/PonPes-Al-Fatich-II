@@ -14,7 +14,7 @@ class WakafTanahController extends Controller
      */
     public function index()
     {
-        return view('frontend::Wakaf_tanah');
+        return view('frontend::Tentang_kami');
     }
 
     /**
